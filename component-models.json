@@ -1006,6 +1006,34 @@
         ]
       },
       {
+        "component": "select",
+        "label": "Submit Format",
+        "name": "submitFormat",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "No Pattern",
+            "value": ""
+          },
+          {
+            "name": "2007-04-01",
+            "value": "y-MM-dd"
+          },
+          {
+            "name": "01-04-2007",
+            "value": "dd-MM-y"
+          },
+          {
+            "name": "04/01/2007",
+            "value": "MM/dd/y"
+          },
+          {
+            "name": "01/04/2007",
+            "value": "dd/MM/y"
+          }
+        ]
+      },
+      {
         "component": "tab",
         "label": "Help Content",
         "name": "help"
