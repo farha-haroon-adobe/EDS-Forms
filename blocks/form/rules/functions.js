@@ -260,6 +260,16 @@ function addDays(date, days) {
   return dateObj.toISOString().split('T')[0];
 }
 
+/**
+ * Marker function used to verify that the Universal Editor / Rule Editor
+ * is loading custom functions from the test/custom-rule-functions branch.
+ * @returns {boolean} - Always returns true.
+ * @memberof module:FormView~customFunctions
+ */
+function branchVerificationMarker() {
+  return true;
+}
+
 export {
   externalize,
   validateURL,
@@ -271,4 +281,5 @@ export {
   fetchCaptchaToken,
   dateToDaysSinceEpoch,
   addDays,
+  branchVerificationMarker,
 };
