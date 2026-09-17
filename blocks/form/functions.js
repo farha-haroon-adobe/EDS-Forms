@@ -1,3 +1,5 @@
+import { addDays, branchVerificationMarker } from './rules/functions.js';
+
 /**
  * Get Full Name
  * @name getFullName Concats first name and last name
@@ -42,5 +44,6 @@ function days(endDate, startDate) {
   return Math.floor(diffInMs / (1000 * 60 * 60 * 24));
 }
 
-// eslint-disable-next-line import/prefer-default-export
-export { getFullName, days, submitFormArrayToString };
+export {
+  getFullName, days, submitFormArrayToString, addDays, branchVerificationMarker,
+};
