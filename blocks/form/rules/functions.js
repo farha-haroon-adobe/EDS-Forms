@@ -244,6 +244,22 @@ function dateToDaysSinceEpoch(date) {
   return Math.floor(dateObj.getTime() / (1000 * 60 * 60 * 24));
 }
 
+/**
+ * Adds the given number of days to a date.
+ * @param {string|Date} date - The date to add days to.
+ * @param {number} days - The number of days to add. Can be negative to subtract days.
+ * @returns {string} - The resulting date as an ISO string (yyyy-mm-dd).
+ * @memberof module:FormView~customFunctions
+ */
+function addDays(date, days) {
+  const dateObj = typeof date === 'string' ? new Date(date) : date;
+  if (!(dateObj instanceof Date) || Number.isNaN(dateObj.getTime())) {
+    throw new Error('Invalid date input');
+  }
+  dateObj.setDate(dateObj.getDate() + days);
+  return dateObj.toISOString().split('T')[0];
+}
+
 export {
   externalize,
   validateURL,
@@ -254,4 +270,5 @@ export {
   defaultSubmitErrorHandler,
   fetchCaptchaToken,
   dateToDaysSinceEpoch,
+  addDays,
 };
